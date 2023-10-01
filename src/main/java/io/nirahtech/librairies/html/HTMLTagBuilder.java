@@ -17,6 +17,7 @@ public final class HTMLTagBuilder {
     private Map<String, Object> attributes = new HashMap<>();
     private String innerHtml = null;
     private Object value = null;
+    private Stylesheet stylesheet = null;
     private List<HTMLTag> children = new ArrayList<>();
 
     public HTMLTagBuilder(final Tag tag) {
@@ -55,8 +56,14 @@ public final class HTMLTagBuilder {
         return this;
     }
 
+    
+    public final HTMLTagBuilder stylesheet(final Stylesheet stylesheet) {
+        this.stylesheet = stylesheet;
+        return this;
+    }
+
     public final HTMLTag build() {
-        final HTMLElement htmlTag =  new HTMLElement(this.tag, this.id, this.classNames, this.attributes);
+        final HTMLElement htmlTag =  new HTMLElement(this.tag, this.id, this.classNames, this.attributes, this.stylesheet);
         htmlTag.setInnerHtml(this.innerHtml);
         htmlTag.setName(this.name);
         htmlTag.setValue(this.value);

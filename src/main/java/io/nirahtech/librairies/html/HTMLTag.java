@@ -20,4 +20,5 @@ public interface HTMLTag extends Root {
     String getInnerHtml();
     Optional<Object> getValue();
     Collection<HTMLTag> getChildren();
+    Stylesheet getStylesheet();
 }

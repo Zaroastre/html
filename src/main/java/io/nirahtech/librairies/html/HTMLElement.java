@@ -25,10 +25,12 @@ final class HTMLElement implements HTMLTag, Serializable {
     private Object value = null;
     private final List<HTMLTag> children = new ArrayList<>();
     private int depth = 1;
+    private final Stylesheet stylesheet;
 
-    HTMLElement(final Tag tag, final String id, final Collection<String> classNames, final Map<String, Object> attributes) {
+    HTMLElement(final Tag tag, final String id, final Collection<String> classNames, final Map<String, Object> attributes, final Stylesheet stylesheet) {
         this.tag = tag;
         this.id = id;
+        this.stylesheet = stylesheet;
         if (Objects.nonNull(classNames)) {
             this.classNames.addAll(classNames);
         }
@@ -154,6 +156,11 @@ final class HTMLElement implements HTMLTag, Serializable {
     @Override
     public final Optional<HTMLTag> getRootNode() {
         return Optional.empty();
+    }
+
+    @Override
+    public final Stylesheet getStylesheet() {
+        return this.stylesheet;
     }
 
     @Override

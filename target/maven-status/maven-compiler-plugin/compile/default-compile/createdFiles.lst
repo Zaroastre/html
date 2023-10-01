@@ -1,0 +1,10 @@
+io/nirahtech/librairies/html/Tag.class
+io/nirahtech/librairies/html/Html.class
+io/nirahtech/librairies/html/Header.class
+io/nirahtech/librairies/html/Root.class
+io/nirahtech/librairies/html/HTMLTagBuilder.class
+io/nirahtech/librairies/html/HTMLTag.class
+io/nirahtech/librairies/html/HTMLElement.class
+io/nirahtech/librairies/html/Metadata.class
+io/nirahtech/librairies/html/Body.class
+io/nirahtech/librairies/html/HtmlBuilder.class
